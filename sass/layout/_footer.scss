@@ -1,0 +1,28 @@
+.footer{
+    @include indents;
+    flex-direction: column;
+    background-color: $footer_bg;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    color: $text_footer_color;
+    &__logo {
+        font-family: $second_font;
+        color: $text_footer_color;
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    a{
+        color: $text_footer_color;
+    }
+    li{
+        list-style-type: none;
+        line-height: 28px;
+        font-size: $text_size_normal;
+        a{
+            i{
+                margin-right: 10px;
+            }
+        }
+    }
+  
+}
