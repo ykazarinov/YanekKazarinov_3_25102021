@@ -1,0 +1,22 @@
+.header{
+    @include indents;
+    justify-content: center;
+    align-items: center;
+    padding-top: 22px;
+    padding-bottom: 12px;
+    @include shadow;
+
+    &__logo{
+        background-image: url($img_logo);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 165px;
+        height: 30px;
+        a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
