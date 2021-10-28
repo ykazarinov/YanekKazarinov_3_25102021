@@ -4,20 +4,20 @@
     background-color: $footer_bg;
     padding-top: 22px;
     padding-bottom: 22px;
-    color: $text_footer_color;
+    color: $text_light;
     &__logo {
         font-family: $second_font;
-        color: $text_footer_color;
+        color: $text_light;
         font-size: 20px;
         margin-bottom: 12px;
     }
     a{
-        color: $text_footer_color;
+        color: $text_light;
     }
     li{
         list-style-type: none;
         line-height: 28px;
-        font-size: $text_size_normal;
+        @include normal_font;
         a{
             i{
                 margin-right: 10px;

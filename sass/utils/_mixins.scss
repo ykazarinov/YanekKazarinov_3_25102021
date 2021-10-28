@@ -2,6 +2,9 @@
    padding: 0 $indent;     
 }
 
-@mixin shadow{
-    box-shadow: 0 0 10px rgba($color: #000000, $alpha: .3);
+@mixin shadow($transporent){
+    box-shadow: 0 3px 10px rgba($color: #000000, $alpha: $transporent);
 }
+
+
+

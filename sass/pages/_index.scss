@@ -1,0 +1,101 @@
+.header2{
+    background-color: $block_bg;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 28px;
+
+    &__sity_point{
+        background-color: darken($block_bg, 10%);
+        @include normal_font;
+        @include indents;
+        color: $text_point_color;
+        justify-content: center;
+        align-items: center;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        width: 100%;
+        margin-bottom: 22px;
+       
+        i{
+            margin-right: 18px;
+        }
+    }
+    .slogan{
+        @include slogan_font;
+        line-height: 24px;
+        text-align: center;
+        @include indents;
+    }
+
+}
+
+.howitwork{
+    @include indents;
+    padding-top: 34px;
+    &__list{
+        flex-direction: column;
+        list-style-position: outside;
+        
+
+        li{
+            color: $text_color;
+            height: 74px;
+            background-color: $block_bg;
+            border-radius: 17px;
+        
+            width: calc(100% - 12px - 34px);
+            @include shadow(.3);
+            @include bold_font;
+            margin-bottom: 24px;
+
+            margin-left: 12px;
+
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 34px;
+    
+            
+            &::after{
+                display: block;
+                width: 24px;
+                height: 24px;
+                line-height: 24px;
+                text-align: center;
+                border-radius: 12px;
+                background-color: $first_color;
+                position: absolute;
+                z-index: 1;
+                left: -12px;
+                top: 25px;
+                color: $text_light;
+             }
+            span{
+                
+                display: inline-block;
+                
+            }
+           
+            i{
+                color: $icon_main_color;
+                margin-right: 23px;
+            }
+            &:hover, &.active{
+                background-color: $block_bg_hover;
+                i{
+                    color: $first_color;
+                }
+            }
+        }
+        @for $i from 1 to 5 {
+            li:nth-child(#{$i}){
+                &::after{
+                    content: "#{$i}" ;
+                }
+            }
+        }
+      
+    }
+}

@@ -16,6 +16,18 @@
 
 html {
   font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+}
+
+h1, h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 3rem;
+}
+
+.center_text {
+  text-align: center;
 }
 
 a {
@@ -26,13 +38,34 @@ a:active {
   color: #4d4d4d;
 }
 
+.main_button {
+  height: 50px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-right: 22px;
+  padding-left: 22px;
+  line-height: 50px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border-radius: 25px;
+  color: #ffffff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  border: none;
+}
+.main_button a {
+  color: #ffffff;
+}
+
 .header {
   padding: 0 20px;
   justify-content: center;
   align-items: center;
   padding-top: 22px;
   padding-bottom: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
 }
 .header__logo {
   background-image: url("../img/logo/ohmyfood.png");
@@ -67,10 +100,108 @@ a:active {
 .footer li {
   list-style-type: none;
   line-height: 28px;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 .footer li a i {
   margin-right: 10px;
+}
+
+.header2 {
+  background-color: #f6f6f6;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 28px;
+}
+.header2__sity_point {
+  background-color: #dddddd;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 0 20px;
+  color: #353535;
+  justify-content: center;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100%;
+  margin-bottom: 22px;
+}
+.header2__sity_point i {
+  margin-right: 18px;
+}
+.header2 .slogan {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  font-weight: lighter;
+  line-height: 24px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.howitwork {
+  padding: 0 20px;
+  padding-top: 34px;
+}
+.howitwork__list {
+  flex-direction: column;
+  list-style-position: outside;
+}
+.howitwork__list li {
+  color: #000000;
+  height: 74px;
+  background-color: #f6f6f6;
+  border-radius: 17px;
+  width: calc(100% - 12px - 34px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  margin-left: 12px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 34px;
+}
+.howitwork__list li::after {
+  display: block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 12px;
+  background-color: #9356DC;
+  position: absolute;
+  z-index: 1;
+  left: -12px;
+  top: 25px;
+  color: #ffffff;
+}
+.howitwork__list li span {
+  display: inline-block;
+}
+.howitwork__list li i {
+  color: #7e7e7e;
+  margin-right: 23px;
+}
+.howitwork__list li:hover, .howitwork__list li.active {
+  background-color: #f5edff;
+}
+.howitwork__list li:hover i, .howitwork__list li.active i {
+  color: #9356DC;
+}
+.howitwork__list li:nth-child(1)::after {
+  content: "1";
+}
+.howitwork__list li:nth-child(2)::after {
+  content: "2";
+}
+.howitwork__list li:nth-child(3)::after {
+  content: "3";
+}
+.howitwork__list li:nth-child(4)::after {
+  content: "4";
 }
 
 /*# sourceMappingURL=style.css.map */

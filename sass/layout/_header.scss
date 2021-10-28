@@ -4,7 +4,9 @@
     align-items: center;
     padding-top: 22px;
     padding-bottom: 12px;
-    @include shadow;
+    @include shadow(.1);
+    position: relative;
+    z-index: 2;
 
     &__logo{
         background-image: url($img_logo);
