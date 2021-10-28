@@ -14,7 +14,7 @@ h1, h2{
 @mixin slogan_font{
     font-family: $main_font;
     font-size: 1.8rem;
-    font-weight: lighter; 
+    font-weight: 400; 
 }
 
 
@@ -25,7 +25,12 @@ h1, h2{
 
 @mixin card_second_font {
     font-size: 1.7rem;
-    font-weight: lighter;
+    font-weight: 400;
+}
+
+@mixin card_heart_font {
+    font-size: 2rem;
+    
 }
 
 @mixin normal_font{

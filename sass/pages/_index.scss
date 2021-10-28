@@ -8,7 +8,7 @@
     &__sity_point{
         background-color: darken($block_bg, 10%);
         @include normal_font;
-        @include indents;
+        
         color: $text_point_color;
         justify-content: center;
         align-items: center;
@@ -33,6 +33,7 @@
 .howitwork{
     @include indents;
     padding-top: 34px;
+    padding-bottom: 34px;
     &__list{
         flex-direction: column;
         list-style-position: outside;
@@ -98,4 +99,100 @@
         }
       
     }
+}
+
+.rest{
+    background-color: $block_bg;
+    @include indents;
+    padding-bottom: 40px;
+    padding-top: 30px;
+
+    &__card{
+        width: 100%;
+        border-radius: 14px;
+        overflow: hidden;
+        background-color: $bg_light;
+        @include shadow(.1);
+        margin-bottom: 18px;
+        position: relative;
+        img{
+            width: 100%;
+            height: 174px;
+            object-fit: cover;
+        }
+        figcaption{
+            padding: 10px 14px 10px 14px; 
+           flex-direction: column;
+           align-items: flex-start;
+           justify-content: center;
+           position: relative;
+           .heart{
+                position: absolute;
+                @include card_heart_font;
+                right: 20px;
+                top: 18px;
+                padding: 5px;
+                display: block;
+
+
+                &.like{
+                    background: linear-gradient(180deg, $first_color 0%, $second_color 100%);
+                    text-transform: uppercase;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    color: #0B2349;
+                    opacity: 1;
+                    
+                  
+                }
+
+                &.normal{ 
+                    color: $text_color;
+                    opacity: 1;
+                   
+                    background-color: #fff;
+                    &:hover{
+                        opacity: 0;
+                       
+                        
+                    }
+                 }
+               
+
+           }
+        }
+    }
+}
+
+.new{
+    @include hint_font;
+    position: absolute;
+    z-index: 1;
+    right: 12px;
+    top: 12px;
+    color: darken($third_color, 50%);
+    height: 29px;
+    background-color: $third_color;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    @include shadow(.3);
+
+    &.disable{
+        display: none;
+    }
+
+    a{
+        color: darken($third_color, 50%);
+    }
+}
+.name{
+    @include card_main_font;
+    line-height: 26px;
+}
+.desc{
+    @include card_second_font;
+    line-height: 26px;
 }
