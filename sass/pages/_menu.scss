@@ -1,0 +1,147 @@
+.menu{
+    &__bg{
+        background-image: url($menu_img1);
+        background-size: 480px auto;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    &__img_space{
+        height: 220px;
+        width: 100%;
+    }
+    &__list{
+        background-color: $bg_light;
+        border-radius: 42px;
+        min-height: 800px;
+        @include indents;
+        padding-top: 20px;
+        padding-bottom: 45px;
+        position: relative;
+    }
+    &__h1{
+        @include menu_h1_font;
+    }
+    &__h2{
+        @include menu_h2_font;
+        margin-bottom: 15px;
+        padding-top: 25px;
+        padding-bottom: 12px;
+        line-height: 1.6rem;
+        position: relative;
+
+        &::after{
+            content: '';
+            width: 40px;
+            height: 3px;
+            background-color: $third_color;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+        }
+
+    }
+
+    &__card{
+        
+        background-color: $bg_light;
+        padding-left: 10px;
+        padding-right: 0;
+        @include shadow(.3);
+        border-radius: 15px;
+        margin-bottom: 14px;
+      
+        overflow: hidden;
+        position: relative;
+        align-items: stretch;
+
+        &:hover{
+            .menu__card{
+                &__check{
+                    transform: translate(-59px, 0);
+                    // margin-right: 0;
+                    i{
+                        transform: rotate(0deg);
+                    }
+                }
+                &__desc{
+                    width: calc(100% - 59px - 30px - 24px);
+                    &__name{
+                        width: calc(100% - 59px);
+                    }
+                    &__compos{
+                        width: calc(100% - 59px);
+                    }
+                    
+                }
+                &__prise{
+                    transform: translate(-59px, 0);
+                }
+            }
+        } 
+
+        &__desc{
+            flex-grow:2;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-bottom: 8px;
+            width: calc(100% - 30px - 24px);
+            
+             &__name{
+                @include plat_name;
+                line-height: 28px;
+                @include dots;
+              width: calc(100%);
+              transition: all 0.4s ease-in-out;
+               
+            }
+            &__compos{
+                @include plat_desc;
+                line-height: 22px;
+                @include dots;
+                width: calc(100%);
+                transition: all 0.4s ease-in-out;
+               
+            }
+        }
+
+
+       
+        &__check{
+            color: $text_light;
+            background-color: $third_color;
+            width: 59px;
+            margin-right: -59px;
+            
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            transition: all 0.4s ease-in-out;
+            i{
+                transition: transform 0.4s ease-in-out;
+                transform: rotate(1turn);
+            }
+        }
+        &__prise{
+            @include plat_prise;
+            padding-top: 8px;
+            padding-bottom: 8px;
+           
+            padding-right: 24px;
+            padding-bottom: 10px;
+            width: 30px;
+            align-items: flex-end;
+            transition: all 0.4s ease-in-out;
+           
+
+        }
+    }
+    
+}
+
+
+
+
+
+
+

@@ -48,6 +48,32 @@ h1, h2{
     font-weight: normal;
 }
 
+@mixin menu_h1_font{
+    font-size: 3rem;
+    font-family: $second_font;
+}
+
+@mixin menu_h2_font{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+@mixin plat_name{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+@mixin plat_desc{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@mixin plat_prise{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 
 .center_text{
     text-align: center;

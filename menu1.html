@@ -22,7 +22,11 @@
          <!--Fonts-->
          <link rel="preconnect" href="https://fonts.googleapis.com">
          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Shrikhand&display=swap" rel="stylesheet">
+         <link  href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Shrikhand&display=swap" 
+            rel="stylesheet"
+            rel="preload"
+            as="font"
+            >  
         
         <!--CSS styles-->
         <link rel="stylesheet" href="public/css/normalize.css" /> <!-- Normalize -->
@@ -33,7 +37,7 @@
         <script src="https://kit.fontawesome.com/9660196032.js" crossorigin="anonymous"></script>
        
     </head>
-    <body>
+    <body class="menu__bg">
        
         <!--header-->
         <header class="flex header">
@@ -42,7 +46,48 @@
             
         </header>
         <!--header-->
-       
+        <section class="menu__img_space">
+        </section>
+
+        <section class="menu__list">
+            <h1 class="menu__h1">À la française</h1>
+            <a href="#" class="heart heart--menu like"><i class="fas fa-heart"></i></a>
+            <a href="#" class="heart heart--menu normal"><i class="far fa-heart"></i></a>
+
+            <h2 class="menu__h2">Entrées</h2>
+            
+            <figure class="flex menu__card">
+                <figcaption class="menu__card__desc">
+                    <div class="menu__card__desc__name">Tartare de poulpe acidulé test test test test</div>
+                    <div class="menu__card__desc__compos">Aux zestes d'orange</div>
+                </figcaption>
+                <div class="flex menu__card__prise">25€</div>
+                <div class="flex menu__card__check"><i class="fas fa-check-circle"></i></div>
+            </figure>
+            
+            <figure class="flex menu__card">
+                <figcaption class="menu__card__desc">
+                    <div class="menu__card__desc__name">Velouté de légumes d'antan</div>
+                    <div class="menu__card__desc__compos">Carotte, panais, topinambour</div>
+                </figcaption>
+                <div class="flex menu__card__prise">35€</div>
+                <div class="flex menu__card__check"><i class="fas fa-check-circle"></i></div>
+            </figure>
+            
+
+            <figure class="flex menu__card">
+                <figcaption class="menu__card__desc">
+                    <div class="menu__card__desc__name">Soupe à l'oignon</div>
+                    <div class="menu__card__desc__compos">Revisitée</div>
+                </figcaption>
+                <div class="flex menu__card__prise">20€</div>
+                <div class="flex menu__card__check"><i class="fas fa-check-circle"></i></div>
+            </figure>
+                
+
+                 
+            
+        </section>
 
         <!--footer-->
         <footer class="flex footer">

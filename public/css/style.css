@@ -14,6 +14,10 @@
   display: inline-block;
 }
 
+html, body {
+  height: 100%;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   font-size: 62.5%;
@@ -57,6 +61,35 @@ a:active {
   color: #ffffff;
 }
 
+.heart {
+  position: absolute;
+  font-size: 2rem;
+  right: 20px;
+  top: 18px;
+  padding: 5px;
+  display: block;
+}
+.heart--menu {
+  font-size: 2.5rem;
+  top: 35px;
+}
+.heart.like {
+  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0B2349;
+  opacity: 1;
+}
+.heart.normal {
+  color: #000000;
+  opacity: 1;
+  background-color: #fff;
+}
+.heart.normal:hover {
+  opacity: 0;
+}
+
 .header {
   padding: 0 20px;
   justify-content: center;
@@ -66,6 +99,7 @@ a:active {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 2;
+  background-color: #ffffff;
 }
 .header__logo {
   background-image: url("../img/logo/ohmyfood.png");
@@ -242,30 +276,6 @@ a:active {
   justify-content: center;
   position: relative;
 }
-.rest__card figcaption .heart {
-  position: absolute;
-  font-size: 2rem;
-  right: 20px;
-  top: 18px;
-  padding: 5px;
-  display: block;
-}
-.rest__card figcaption .heart.like {
-  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
-  text-transform: uppercase;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #0B2349;
-  opacity: 1;
-}
-.rest__card figcaption .heart.normal {
-  color: #000000;
-  opacity: 1;
-  background-color: #fff;
-}
-.rest__card figcaption .heart.normal:hover {
-  opacity: 0;
-}
 
 .new {
   font-size: 1.4rem;
@@ -301,6 +311,131 @@ a:active {
   font-size: 1.7rem;
   font-weight: 400;
   line-height: 26px;
+}
+
+.menu__bg {
+  background-image: url("../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-size: 480px auto;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.menu__img_space {
+  height: 220px;
+  width: 100%;
+}
+.menu__list {
+  background-color: #ffffff;
+  border-radius: 42px;
+  min-height: 800px;
+  padding: 0 20px;
+  padding-top: 20px;
+  padding-bottom: 45px;
+  position: relative;
+}
+.menu__h1 {
+  font-size: 3rem;
+  font-family: "Shrikhand", cursive;
+}
+.menu__h2 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 15px;
+  padding-top: 25px;
+  padding-bottom: 12px;
+  line-height: 1.6rem;
+  position: relative;
+}
+.menu__h2::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+.menu__card {
+  background-color: #ffffff;
+  padding-left: 10px;
+  padding-right: 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  position: relative;
+  align-items: stretch;
+}
+.menu__card:hover .menu__card__check {
+  transform: translate(-59px, 0);
+}
+.menu__card:hover .menu__card__check i {
+  transform: rotate(0deg);
+}
+.menu__card:hover .menu__card__desc {
+  width: calc(100% - 59px - 30px - 24px);
+}
+.menu__card:hover .menu__card__desc__name {
+  width: calc(100% - 59px);
+}
+.menu__card:hover .menu__card__desc__compos {
+  width: calc(100% - 59px);
+}
+.menu__card:hover .menu__card__prise {
+  transform: translate(-59px, 0);
+}
+.menu__card__desc {
+  flex-grow: 2;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-bottom: 8px;
+  width: calc(100% - 30px - 24px);
+}
+.menu__card__desc__name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+}
+.menu__card__desc__compos {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+}
+.menu__card__check {
+  color: #ffffff;
+  background-color: #99E2D0;
+  width: 59px;
+  margin-right: -59px;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  transition: all 0.4s ease-in-out;
+}
+.menu__card__check i {
+  transition: transform 0.4s ease-in-out;
+  transform: rotate(1turn);
+}
+.menu__card__prise {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 24px;
+  padding-bottom: 10px;
+  width: 30px;
+  align-items: flex-end;
+  transition: all 0.4s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

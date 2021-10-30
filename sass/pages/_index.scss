@@ -126,40 +126,7 @@
            align-items: flex-start;
            justify-content: center;
            position: relative;
-           .heart{
-                position: absolute;
-                @include card_heart_font;
-                right: 20px;
-                top: 18px;
-                padding: 5px;
-                display: block;
 
-
-                &.like{
-                    background: linear-gradient(180deg, $first_color 0%, $second_color 100%);
-                    text-transform: uppercase;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    color: #0B2349;
-                    opacity: 1;
-                    
-                  
-                }
-
-                &.normal{ 
-                    color: $text_color;
-                    opacity: 1;
-                   
-                    background-color: #fff;
-                    &:hover{
-                        opacity: 0;
-                       
-                        
-                    }
-                 }
-               
-
-           }
         }
     }
 }
@@ -196,3 +163,4 @@
     @include card_second_font;
     line-height: 26px;
 }
+

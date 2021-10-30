@@ -7,6 +7,7 @@
     @include shadow(.1);
     position: relative;
     z-index: 2;
+    background-color: $bg_light;
 
     &__logo{
         background-image: url($img_logo);
