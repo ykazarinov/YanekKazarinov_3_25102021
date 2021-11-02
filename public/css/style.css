@@ -43,12 +43,8 @@ a:active {
 }
 
 .main_button {
-  height: 50px;
   font-size: 1.6rem;
   font-weight: bold;
-  padding-right: 22px;
-  padding-left: 22px;
-  line-height: 50px;
   margin-top: 24px;
   margin-bottom: 24px;
   border-radius: 25px;
@@ -59,9 +55,19 @@ a:active {
   min-width: 186px;
   margin-left: auto;
   margin-right: auto;
+  transition: transform 0.1s ease-in-out;
+}
+.main_button:hover {
+  transform: scale(1.1);
 }
 .main_button a {
+  display: block;
   color: #ffffff;
+  height: 50px;
+  padding-right: 22px;
+  padding-left: 22px;
+  line-height: 50px;
+  border-radius: 25px;
 }
 
 .heart {
@@ -84,6 +90,10 @@ a:active {
   color: #0B2349;
   opacity: 1;
 }
+.heart.like:hover {
+  animation: puls 0.4s ease-in-out both infinite;
+  cursor: pointer;
+}
 .heart.normal {
   color: #000000;
   opacity: 1;
@@ -95,9 +105,32 @@ a:active {
   background-color: #f6f6f6;
 }
 .heart.normal:hover {
+  cursor: pointer;
+  animation: puls 0.4s ease-in-out both infinite;
+}
+.heart.normal:active {
   opacity: 0;
 }
 
+@keyframes puls {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes grand {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
 .header {
   padding: 0 20px;
   justify-content: center;
@@ -217,12 +250,12 @@ a:active {
   align-items: center;
   padding-left: 34px;
 }
+.howitwork__list li:hover::after {
+  transform: scale(1.1);
+}
 .howitwork__list li::after {
-  display: block;
   width: 24px;
   height: 24px;
-  line-height: 24px;
-  text-align: center;
   border-radius: 12px;
   background-color: #9356DC;
   position: absolute;
@@ -230,6 +263,10 @@ a:active {
   left: -12px;
   top: 25px;
   color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.1s ease-in-out;
 }
 .howitwork__list li span {
   display: inline-block;

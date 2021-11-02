@@ -1,10 +1,10 @@
 
 .main_button{
-    height: 50px;
+    // height: 50px;
     @include bold_font;
-    padding-right: 22px;
-    padding-left: 22px;
-    line-height: 50px;
+    // padding-right: 22px;
+    // padding-left: 22px;
+    // line-height: 50px;
     margin-top: 24px;
     margin-bottom: 24px;
     border-radius: 25px;
@@ -15,8 +15,19 @@
     min-width: 186px;
     margin-left: auto;
     margin-right: auto;
+    transition: transform .1s ease-in-out;
+    &:hover{
+        transform: scale(1.1);
+    }
     a{
+        display: block;
         color: $text_light;
+        height: 50px;
+        padding-right: 22px;
+        padding-left: 22px;
+        line-height: 50px;
+        border-radius: 25px;
+        
     }
     
 }
@@ -44,11 +55,17 @@
         -webkit-text-fill-color: transparent;
         color: #0B2349;
         opacity: 1;
+        &:hover{
+            animation: puls .4s ease-in-out  both infinite;
+            cursor: pointer;
+        }
     }
 
     &.normal{ 
         color: $text_color;
         opacity: 1;
+        // transition: opacity .4s ease-in-out;
+        
         &.white_bg{
             background-color: $bg_light;
         }
@@ -57,7 +74,45 @@
         }
         
         &:hover{
-            opacity: 0;
+            // opacity: 0;
+            cursor: pointer;
+            animation: puls .4s ease-in-out  both infinite;
+
         }
+        &:active{
+            opacity: 0; 
+        }
+    }
+}
+
+@keyframes puls{
+    0%{
+        
+        // opacity: 0;
+        transform: scale(1);
+    }
+    50%{
+        
+        // opacity: 1;
+        transform: scale(1.1);
+    }
+    100%{
+        
+        // opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes grand{
+    0%{
+        
+        // opacity: 0;
+        transform: scale(1);
+    }
+
+    100%{
+        
+        // opacity: 1;
+        transform: scale(1.1);
     }
 }

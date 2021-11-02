@@ -57,14 +57,22 @@
             justify-content: flex-start;
             align-items: center;
             padding-left: 34px;
+            
+
+            &:hover{
+                &::after{
+                    transform: scale(1.1);
+                }
+
+            }
     
             
             &::after{
-                display: block;
+                // display: block;
                 width: 24px;
                 height: 24px;
-                line-height: 24px;
-                text-align: center;
+                // line-height: 24px;
+                // text-align: center;
                 border-radius: 12px;
                 background-color: $first_color;
                 position: absolute;
@@ -72,6 +80,10 @@
                 left: -12px;
                 top: 25px;
                 color: $text_light;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: transform .1s ease-in-out;
              }
             span{
                 
