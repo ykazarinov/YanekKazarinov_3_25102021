@@ -24,7 +24,7 @@
     }
     &__h2{
         @include menu_h2_font;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
         padding-top: 25px;
         padding-bottom: 12px;
         line-height: 1.6rem;
@@ -42,6 +42,12 @@
 
     }
 
+    
+
+
+
+
+
     &__card{
         
         background-color: $bg_light;
@@ -54,6 +60,13 @@
         overflow: hidden;
         position: relative;
         align-items: stretch;
+
+        
+        animation: cards_emergence 1s both;
+       
+
+
+
 
         &:hover{
             .menu__card{
@@ -136,8 +149,27 @@
 
         }
     }
+
+    @for $i from 1 through $card_number {
+        &__card:nth-of-type(#{$i}) {
+            animation-delay: calc(.2s * $i);
+          }
+      }
     
 }
+
+@keyframes cards_emergence{
+    0%{
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0, -10px);
+        opacity: 1;
+    }
+}
+
+
 
 
 
