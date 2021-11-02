@@ -56,6 +56,9 @@ a:active {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   border: none;
+  min-width: 186px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .main_button a {
   color: #ffffff;
@@ -84,7 +87,12 @@ a:active {
 .heart.normal {
   color: #000000;
   opacity: 1;
-  background-color: #fff;
+}
+.heart.normal.white_bg {
+  background-color: #ffffff;
+}
+.heart.normal.grey_bg {
+  background-color: #f6f6f6;
 }
 .heart.normal:hover {
   opacity: 0;
@@ -314,18 +322,29 @@ a:active {
 }
 
 .menu__bg {
-  background-image: url("../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   background-size: 480px auto;
   background-position-x: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+.menu__bg--1 {
+  background-image: url("../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.menu__bg--2 {
+  background-image: url("../img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+.menu__bg--3 {
+  background-image: url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.menu__bg--4 {
+  background-image: url("../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 .menu__img_space {
   height: 220px;
   width: 100%;
 }
 .menu__list {
-  background-color: #ffffff;
+  background-color: #f6f6f6;
   border-radius: 42px;
   min-height: 800px;
   padding: 0 20px;
@@ -360,7 +379,7 @@ a:active {
   background-color: #ffffff;
   padding-left: 10px;
   padding-right: 0;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   margin-bottom: 14px;
   overflow: hidden;
@@ -446,6 +465,27 @@ a:active {
 }
 .menu__card:nth-of-type(3) {
   animation-delay: 0.6s;
+}
+.menu__card:nth-of-type(4) {
+  animation-delay: 0.8s;
+}
+.menu__card:nth-of-type(5) {
+  animation-delay: 1s;
+}
+.menu__card:nth-of-type(6) {
+  animation-delay: 1.2s;
+}
+.menu__card:nth-of-type(7) {
+  animation-delay: 1.4s;
+}
+.menu__card:nth-of-type(8) {
+  animation-delay: 1.6s;
+}
+.menu__card:nth-of-type(9) {
+  animation-delay: 1.8s;
+}
+.menu__card:nth-of-type(10) {
+  animation-delay: 2s;
 }
 
 @keyframes cards_emergence {

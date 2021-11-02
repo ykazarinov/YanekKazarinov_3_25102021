@@ -1,17 +1,23 @@
 .menu{
     &__bg{
-        background-image: url($menu_img1);
+        
         background-size: 480px auto;
         background-position-x: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        @for $i from 1 to calc(length($menu_img) + 1) {
+            &--#{$i}{
+            background-image: url(nth($menu_img, $i));
+        }
+        }
+        
     }
     &__img_space{
         height: 220px;
         width: 100%;
     }
     &__list{
-        background-color: $bg_light;
+        background-color: $block_bg;
         border-radius: 42px;
         min-height: 800px;
         @include indents;
@@ -53,7 +59,7 @@
         background-color: $bg_light;
         padding-left: 10px;
         padding-right: 0;
-        @include shadow(.3);
+        @include shadow(.1);
         border-radius: 15px;
         margin-bottom: 14px;
       
