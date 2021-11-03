@@ -1,0 +1,231 @@
+.preloader{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: $bg_dark;
+    justify-content: center;
+    align-items: center;
+    animation: preloader_bg 3s ease-in-out forwards infinite;
+    z-index: 5;
+ 
+}
+
+.pot{
+    width: 250px;
+    height: 150px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+   
+   
+
+    
+}
+
+.pot{
+    // background: linear-gradient(180deg, $second_color 0%, $first_color 100%);
+    // border: solid 2px $first_color;
+
+    position: relative;
+     animation-name: pot;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transform-origin:50% 0%;
+    animation-timing-function:ease-in-out;
+
+    &__top{
+        position: absolute;
+        top: -30px;
+        left: -5%;
+        height: 10px;
+        width: calc(110% - 20px);
+        // background-color: $bg_light;
+        border: solid 10px $bg_light;
+        border-bottom: none;
+
+        &::before{
+            
+            bottom: -50px;
+            left: -48px;
+            clip: rect(auto, auto, 20px, 40px);
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 10px solid $bg_light;
+            border-radius: 25%;
+            z-index: 1;
+        }
+
+        &::after{
+            
+            bottom: -50px;
+            right: -47px;
+            clip: rect(auto, 20px, 40px, auto);
+            border-color: #fff;
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 10px solid $bg_light;
+            border-radius: 25%;
+            z-index: 1;
+        }
+    }
+}
+
+
+.ball{
+    position: absolute;
+    background-color: $bg_light;
+    // animation: ball 1s ease-in-out infinite;
+
+
+    width: 20px;
+    height: 25px;
+    border-radius: 12px;
+    position:absolute;
+    animation: upDown 1.5s alternate infinite ease-in-out;
+    width:100%;
+
+
+    @for $i from 1 through 5 {
+        
+        &--#{$i} {
+            
+            $tail1: calc(random(20) + 10) + px;
+            $tail2: random(150) + px;
+            border-radius: calc($tail1 / 2);
+            height: $tail1;
+            width: $tail1;
+            top: 0;
+            left: $tail2;
+            animation-duration: calc(random(7) * $i) + s;
+        }
+    }
+}
+
+.ball_cont{
+    position:absolute;
+  left:0;
+  top: 0;
+  width:10%;
+  height: 10%;
+  animation: translate 2s infinite linear;
+  
+  z-index: 10;
+}
+
+@keyframes upDown {
+    to { transform: translateX(70px);}
+  }
+  @keyframes translate {
+    to { transform: translateY(-1500%);
+        opacity: 0;
+    }
+  }
+
+
+
+
+
+@keyframes preloader_bg {
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    75%{
+        opacity: 1; 
+        transform: scale(1);
+    }
+
+    // 99%{
+    //     opacity: 0;
+    //     transform: scale(1);
+        
+    // }
+    // 100%{
+    //     opacity: 0;
+    //     transform: scale(0);
+    // }
+}
+
+@keyframes pot{
+    0%   { -webkit-transform: rotate(15deg) translateX(-50px); }
+    100% { -webkit-transform: rotate(-15deg) translateX(50px); }
+}
+
+@keyframes ball{
+    0%{
+        transform: scale(1) translateY(0);
+        opacity: calc(random(100) / 100);
+    }
+    100%{
+        transform: scale(2) translateY(-100px);
+        opacity: 0;
+    }
+}
+
+.waves {
+
+    position: relative;
+    overflow: hidden;
+
+    width: 230px;
+    height: 140px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border: solid 10px $bg_light;
+    border-top: none;
+}
+
+.wave1, .wave2{
+    position: absolute;
+    width: 365%;
+    height: 600%;
+}
+.wave1{
+    left: 20%; /*определяем положение блока*/
+    top: 32%;
+    background-color: #a0e9ff; /*окрашиваем блок*/
+    border-radius: 45%;  /*закругляем углы*/
+    // animation: wave 10s linear infinite;  /*добавляем анимацию*/
+} 
+ .wave2{
+    left: -130%;  /*определяем положение блока*/
+    
+    top: 30%;
+    // background-color: #57d0ff;  /*окрашиваем блок*/
+    background: linear-gradient(180deg, $second_color 0%, $first_color 100%);
+    border-radius: 40%;  /*закругляем углы*/
+    animation: wave 8s linear infinite; /*добавляем анимацию*/
+}
+
+@keyframes wave {
+    100% {
+       transform: rotate(360deg);
+    }
+}
+
+.panhandle{
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    background-color: $bg_light;
+    top:0;
+    z-index: 5;
+
+    &--left{
+        left: -29px;
+        transform: skew(10deg) rotate(10deg);
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        
+    }
+    &--right{
+        right: -29px;
+        transform: skew(-10deg) rotate(-10deg);
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+}
