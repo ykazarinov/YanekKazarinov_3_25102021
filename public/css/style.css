@@ -58,9 +58,6 @@ a:active {
   margin-right: auto;
   transition: transform 0.1s ease-in-out;
 }
-.main_button:hover {
-  transform: scale(1.1);
-}
 .main_button a {
   display: block;
   color: #ffffff;
@@ -98,6 +95,7 @@ a:active {
 .heart.normal {
   color: #000000;
   opacity: 1;
+  transition: opacity 0.4s ease-in-out;
 }
 .heart.normal.white_bg {
   background-color: #ffffff;
@@ -107,7 +105,7 @@ a:active {
 }
 .heart.normal:hover {
   cursor: pointer;
-  animation: puls 0.4s ease-in-out both infinite;
+  opacity: 0;
 }
 .heart.normal:active {
   opacity: 0;
@@ -115,13 +113,13 @@ a:active {
 
 @keyframes puls {
   0% {
-    transform: scale(1);
+    opacity: 0;
   }
   50% {
-    transform: scale(1.1);
+    opacity: 1;
   }
   100% {
-    transform: scale(1);
+    opacity: 1;
   }
 }
 @keyframes grand {
@@ -133,7 +131,7 @@ a:active {
   }
 }
 .preloader {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
@@ -202,37 +200,37 @@ a:active {
   animation: upDown 1.5s alternate infinite ease-in-out;
 }
 .ball--1 {
+  border-radius: calc(12.5px / 2);
+  height: 12.5px;
+  width: 12.5px;
+  top: 0;
+  left: 0;
+}
+.ball--2 {
   border-radius: calc(11px / 2);
   height: 11px;
   width: 11px;
   top: 0;
   left: 0;
 }
-.ball--2 {
-  border-radius: calc(13.5px / 2);
-  height: 13.5px;
-  width: 13.5px;
-  top: 0;
-  left: 0;
-}
 .ball--3 {
-  border-radius: calc(7px / 2);
-  height: 7px;
-  width: 7px;
+  border-radius: calc(5.5px / 2);
+  height: 5.5px;
+  width: 5.5px;
   top: 0;
   left: 0;
 }
 .ball--4 {
-  border-radius: calc(6.5px / 2);
-  height: 6.5px;
-  width: 6.5px;
+  border-radius: calc(12.5px / 2);
+  height: 12.5px;
+  width: 12.5px;
   top: 0;
   left: 0;
 }
 .ball--5 {
-  border-radius: calc(7.5px / 2);
-  height: 7.5px;
-  width: 7.5px;
+  border-radius: calc(7px / 2);
+  height: 7px;
+  width: 7px;
   top: 0;
   left: 0;
 }
@@ -248,34 +246,34 @@ a:active {
   opacity: 0;
 }
 .ball_cont--1 {
-  left: calc(35px);
-  animation-delay: 0.3s;
-  animation-duration: 2.3s;
+  left: calc(33px);
+  animation-delay: 0.1s;
+  animation-duration: 2.2s;
 }
 .ball_cont--2 {
-  left: calc(35px);
-  animation-delay: 0.2s;
-  animation-duration: 2.2s;
+  left: calc(63px);
+  animation-delay: 0.6s;
+  animation-duration: 2.4s;
 }
 .ball_cont--3 {
-  left: calc(12px);
+  left: calc(30px);
   animation-delay: 0.9s;
-  animation-duration: 2.2s;
+  animation-duration: 1.8s;
 }
 .ball_cont--4 {
-  left: calc(35px);
-  animation-delay: 1.2s;
+  left: calc(41px);
+  animation-delay: 0.4s;
   animation-duration: 1.6s;
 }
 .ball_cont--5 {
-  left: calc(44px);
-  animation-delay: 1s;
-  animation-duration: 2.2s;
+  left: calc(42px);
+  animation-delay: 1.5s;
+  animation-duration: 1.9s;
 }
 
 @keyframes upDown {
   to {
-    transform: translateX(calc(11px * 0.46));
+    transform: translateX(calc(8px * 1.11));
   }
 }
 @keyframes translate {
@@ -723,6 +721,9 @@ a:active {
   position: relative;
   align-items: stretch;
   animation: cards_emergence 1s both;
+}
+.menu__card:hover {
+  cursor: pointer;
 }
 .menu__card:hover .menu__card__check {
   transform: translate(-59px, 0);

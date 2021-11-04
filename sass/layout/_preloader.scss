@@ -22,7 +22,7 @@ $bg_color: rgba(0, 0, 0, 0.7);
 $preloader_main_color: preloader_color($bg_color);
 
 .preloader{
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: $bg_color;

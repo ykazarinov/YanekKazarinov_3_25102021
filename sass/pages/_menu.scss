@@ -75,6 +75,7 @@
 
 
         &:hover{
+            cursor: pointer;
             .menu__card{
                 &__check{
                     transform: translate(-59px, 0);
