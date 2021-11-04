@@ -1,0 +1,7 @@
+@function preloader_color($bg_color){
+    @if ( lightness($bg_color) < 25%){
+        @return #ffffff;
+    }@else{
+        @return #000000;
+    }
+}
