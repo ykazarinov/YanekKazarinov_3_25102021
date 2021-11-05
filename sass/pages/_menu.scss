@@ -18,7 +18,7 @@
     }
     &__list{
         background-color: $block_bg;
-        border-radius: 42px;
+        border-radius: 42px 42px 0 0;
         min-height: 800px;
         @include indents;
         padding-top: 20px;

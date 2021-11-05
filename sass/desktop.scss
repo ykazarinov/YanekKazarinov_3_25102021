@@ -1,0 +1,61 @@
+@media screen and (min-width: 767px) {
+    
+
+    .menu{
+        &__bg{
+            background-size: 100% auto;
+            background-position-y: center;
+        }
+        &__list{
+            padding-left: 20%;
+            padding-right: 20%;
+            .heart{
+                right: 20%;
+            }
+        }
+
+    }
+
+    .rest{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__card{
+            width: calc(50% - 10px);
+            &:nth-of-type(odd){
+                margin-right: 10px;
+            }
+            &:nth-of-type(even){
+                margin-left: 10px;
+            }
+        }
+        h1{
+            width: 100%;
+        }
+    }
+
+    .howitwork, .rest, .footer{
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+        &__logo{
+            text-align: center;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                
+                width: 50%;
+            }
+        }
+    }
+
+   
+    
+
+    
+}
